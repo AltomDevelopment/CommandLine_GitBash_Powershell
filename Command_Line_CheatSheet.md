@@ -3,110 +3,66 @@
 
 ## Working with Directories 
 
-**pwd**
-Displays the path of the current working Directory
-**cd <directory>**
-Change directory to <directory>
-**cd\**
-Takes you to the top of the directory tree
-**cd ..**
-Navigate to parent directory
-**dir**
-List directory contents
-**dir -la**
-List detailed directory contents, including hidden files 
-**mkdir <directory>**
-Create new directory named <directory>
-**ren [old_folder][new_folder]**
-Renames an old folder name with a new folder name
-
+- **pwd** Displays the path of the current working Directory
+- **cd <directory>** Change directory to <directory>
+- **cd\\** Takes you to the top of the directory tree
+- **cd ..** Navigate to parent directory
+- **dir** List directory contents
+- **dir -la** List detailed directory contents, including hidden files 
+- **mkdir <directory>** Create new directory named <directory>
+- **ren [old_folder][new_folder]** Renames an old folder name with a new folder name 
 ## Working with Files
 
-**rm <file>**
-Delete <file>
-**rm -r <directory>**
-Delete <directory>
-**rm -f<file>**
-Force Delete <file> (add -r to force delete a directory)
-**mv <file-old> <file-new>**
-Rename <file-old> to <file-new>
-**mv <file> <directory>**
-Move <file> to <directory> (possibly overwriting an existing file)
-**cp <file> <directory>**
-Copy <file> to <directory> (possibly overwritting an existing file)
-**cp -r <directory1> <directory2>**
-Copy <directory1> and its contents to <directory2> (possibly overwritting files in an existing directory)
-**touch <file>**
-Update file access & modification time (and create <file> if it doesn't exist)
+- **rm <file>** Delete <file>
+- **rm -r <directory>** Delete <directory>
+- **rm -f<file>** Force Delete <file> (add -r to force delete a directory)
+- **mv <file-old> <file-new>** Rename <file-old> to <file-new>
+- **mv <file> <directory>** Move <file> to <directory> (possibly overwriting an existing file)
+- **cp <file> <directory>** Copy <file> to <directory> (possibly overwritting an existing file)
+- **cp -r <directory1> <directory2>** Copy <directory1> and its contents to <directory2> (possibly overwritting files in an existing directory)
+- **touch <file>** Update file access & modification time (and create <file> if it doesn't exist)
 
 ## Search
 
-**find <dir> -name "<file>"**
-Find all files named <file> inside <dir> (use wildcards [*] to search for parts of filenames, e.g."file.*")
-**findstr "<text>" <file>**
-Output all occurences of <text> inside <file> (add -i for case-insensitivity)
-**findstr -rl "<text>" <dir>**
-Search for all files containing <text> inside <dir>
+- **find <dir> -name "<file>"** Find all files named <file> inside <dir> (use wildcards [*] to search for parts of filenames, e.g."file.*")
+- **findstr "<text>" <file>** Output all occurences of <text> inside <file> (add -i for case-insensitivity)
+- **findstr -rl "<text>" <dir>** Search for all files containing <text> inside <dir>
 
 ## Output
 
-**cat <file>**
-Output the contents of <file>
-**more <file>**
-Output the contents of <file> using the more command (which supports pagination etc.)
-**head <file>**
-Output the first 10 lines of <fie>
-**<cmd> > <file>**
-Direct the output of <cmd> into <file>
-**<cmd> >> <file>**
-Append the output of <cmd> to <file>
-**<cmd1> | <cmd2>**
-Direct the output of <cmd1> to <cmd2>
-**clear**
-Clear the command line window
+- **cat <file>** Output the contents of <file>
+- **more <file>** Output the contents of <file> using the more command (which supports pagination etc.)
+- **head <file>** Output the first 10 lines of <fie>
+- **<cmd> > <file>** Direct the output of <cmd> into <file>
+- **<cmd> >> <file>** Append the output of <cmd> to <file>
+- **<cmd1> | <cmd2>** Direct the output of <cmd1> to <cmd2>
+- **clear** Clear the command line window
 
 ## Permissions
 
-**chmod 755 <file>**
-Change permissions of <file> to 755
-**chmod -R 600 <directory>**
-Change permissions of <directory> (and its contents) to 600
-**chown <user>;<group> <file>**
-Change ownership of <file> to <user> and <group> (add -R to include a directory's contents)
+- **chmod 755 <file>** Change permissions of <file> to 755
+- **chmod -R 600 <directory>** Change permissions of <directory> (and its contents) to 600
+- **chown <user>;<group> <file>** Change ownership of <file> to <user> and <group> (add -R to include a directory's contents)
 
 ## Network
 
-**ipconfig**
-Shows complete info about the network 
-**tracert**
-Shows complete information about a packets path
-**NSLOOKUP**
-Displays info for diagnosing (DNS) infastructure 
-**ROUTE**
-Helps you manually configure Routes 
-**DISKPART**
-Helps you manage your computers drives 
-**FORMAT**
-Format a disk 
-**ping <host>**
-Ping <host> and display status
-**whois <domain>**
-Output whois information for <domain>
-**curl -O <url/to/file>**
-Download <file> (via HTTP(S) or FTP)
-**ssh <username>@<host>**
-Establish an SSH connection to <host> with user <username>
-**scp <file> <user>@<host>:/remote/path**
-Copy <file> to a remote <host>
+- **ipconfig** Shows complete info about the network 
+- **tracert** Shows complete information about a packets path
+- **NSLOOKUP** Displays info for diagnosing (DNS) infastructure 
+- **ROUTE** Helps you manually configure Routes 
+- **DISKPART** Helps you manage your computers drives 
+- **FORMAT** Format a disk 
+- **ping <host>** Ping <host> and display status
+- **whois <domain>** Output whois information for <domain>
+- **curl -O <url/to/file>** Download <file> (via HTTP(S) or FTP)
+- **ssh <username>@<host>** Establish an SSH connection to <host> with user <username>
+- **scp <file> <user>@<host>:/remote/path** Copy <file> to a remote <host>
 
 ## Processes
 
-**ps ax**
-Output currently running processes
-**top**
-Display live information about curently running processes
-**kill <pid>**
-Quit process with ID <pid>
+- **ps ax** Output currently running processes
+- **top** Display live information about curently running processes
+- **kill <pid>** Quit process with ID <pid>
 
 ## Getting Help
 
@@ -114,25 +70,19 @@ Quit process with ID <pid>
 
 ## Keyboard Shortcuts
 
-**CTRL + A**
-moves caret to the beggining
-**CTRL + K**
-moves caret to the end of the line
-**CTRL + E**
-deletes all characters after
-**CTRL + U**
-deletes all characters infront of
-**CTRL + L**
-clears the screen
-**CTRL + C**
-abort a running command
+- **CTRL + A** moves caret to the beggining
+- **CTRL + K** moves caret to the end of the line
+- **CTRL + E** deletes all characters after
+- **CTRL + U** deletes all characters infront of
+- **CTRL + L** clears the screen
+- **CTRL + C** abort a running command
 
 ## Home Folder
 
 the ~ character addresses the path of your home folder
-cd /Users/your-username/projects/
+**cd /Users/your-username/projects/**
 turns into
-cd ~/projects
+**cd ~/projects**
 
 **whoami** 
 Retrieves your username
@@ -159,7 +109,7 @@ use the ; if you want to run more then one command at once
 code placed after the && operator will only be run if the previous command completes successfully.
 the || operator only continues if the previous command fails
 
-cd ~videos || mkdir ~/videos
+**cd ~videos || mkdir ~/videos**
 this command will only create the folder if the cd command fails
 
 ## Arrow Keys
@@ -175,185 +125,185 @@ calling the history command prints a list of all recent commands
 | operator will direct output to another command 
 Example:
 This command will list the current directorys contents, search the list for PDF files and display the results with the less command 
-dir | findstr ".pdf" | more 
+**dir | findstr ".pdf" | more** 
 
 ## More Commands
 
-**ASSOC**
+- **ASSOC**
 Displays or modifies file extension associations
-**ATTRIB**
+- **ATTRIB**
 Displays or changes file attributes
-**BREAK**
+- **BREAK**
 Sets or clears extended CTRL+C checking 
-**BCDBOOT**
+- **BCDBOOT**
 used to copy critical files to the system partition and to create a new system BCD storage 
-**BCDEDIT** 
+- **BCDEDIT** 
 Sets properties in boot database to control boot loading
-**CACLS**
+- **CACLS**
 Shows or changes access control lists (ACLS) of files
-**CALL**
+- **CALL**
 Calls a batch program from another
-**CHCP**
+- **CHCP**
 Displays or sets the active page code number 
-**CHKDSK**
+- **CHKDSK**
 Checks a disk and displays a status report
-**CHKNTFS**
+- **CHKNTFS**
 Displays or modifies the checking of disk at boot time 
-**CHOICE**
+- **CHOICE**
 Batch file command that allows users to select from a set of options 
-**CIPHER**
+- **CIPHER**
 Displays or alters the encryption of directories (files) on NTFS partitions 
-**CLIP**
+- **CLIP**
 Redirects output off another command to the Windows clipboard 
-**CMDKEY**
+- **CMDKEY**
 Creates, Lists, and deletes stored usernames and passwords or credentials 
-**COLOR** 
+- **COLOR** 
 Sets the default console colors 
-**COMP**
+- **COMP**
 Compares the contents of 2 files or sets of files byte by byte 
-**COMPACT* 
+- **COMPACT** 
 Displays or alters the compression of files on NTSF partitions 
-**CONVERT**
+- **CONVERT**
 Converts DAT volumes to NTFS. You cannot convert the current drive.
-**COPY**
+- **COPY**
 Copies one or more files to another location 
-**DATE** 
+- **DATE** 
 Displays or sets the date
-**DEFRAG**
+- **DEFRAG**
 disk defragment accessory
-**DEL**
+- **DEL**
 Deletes one or more files
-**DISKCOMP**
+- **DISKCOMP**
 Compares the contents or 2 floppy disks
-**DISKCOPY**
+- **DISKCOPY**
 Copies the contents of one floppy disk to another 
-**DISKPART**
+- **DISKPART**
 Display or configures Disk Partition Properties 
-**DOSKEY**
+- **DOSKEY**
 Edits command lines, recalls Windows Commands, and creates macros
-**DRIVERQUERY**
+- **DRIVERQUERY**
 Displays current device driver status and properties 
-**ECHO** 
+- **ECHO** 
 Displays Messages, or turns commands echoing on or off
-**ENDLOCAL**
+- **ENDLOCAL**
 Ends localiztion of environment changes in  a batch file 
-**ERASE**
+- **ERASE**
 Deletes one or more files 
-**EXIT**
+- **EXIT**
 Quits and closes the command shell
-**EXPAND** 
+- **EXPAND** 
 Expands compressed files 
-**FC**
+- **FC**
 Comapares two files or sets of files and displays the differences between them 
-**FIND**  
+- **FIND**  
 Searches for a text string in a file or files 
-**FOR** 
+- **FOR** 
 Runs a specified command for each item in a set 
-**FORFILES**
+- **FORFILES**
 Selects files in a folder for batch processing 
-**FORMAT** 
+- **FORMAT** 
 Formats a disc for use with Windows 
-**FSUTIL**
+- **FSUTIL**
 Displays or configures the file system properties 
-**FTYPE**
+- **FTYPE**
 Displays or modifies fie types used in file extensions associations 
-**GOTO** 
+- **GOTO** 
 Directs the Windows Command interpreter to a labeled line in a batch program
-**GPRESULT**
+- **GPRESULT**
 Display the Group Policy Information for machine or User 
-**GRAFTABL**
+- **GRAFTABL**
 Enables Windows to display an extended character set in graphics mode
-**ICACLS**
+- **ICACLS**
 Display, Modify, Backup, or Restore ACL's for files and directories 
-**IF** 
+- **IF** 
 Performs conditional processing in batch programs 
-**LABEL**
+- **LABEL**
 Creates, changes or deletes the volume label of a disk 
-**MD** 
+- **MD** 
 Makes a directory 
-**MKLINK** 
+- **MKLINK** 
 Creates Symbolic Links and Hard Links 
-**MODE** 
+- **MODE** 
 Configures a system device
-**MORE**
+- **MORE**
 Displays the output one screen at a time 
-**MOVE**
+- **MOVE**
 Moves one or more files from one directory to another directory 
-**OPENFILES**
+- **OPENFILES**
 Queries, displays, or disconnects open files or files opened by network users 
-**PATH** 
+- **PATH** 
 Displays or sets a search path for exe files 
-**PAUSE**
+- **PAUSE**
 Suspends processing of a batch file 
-**POPD** 
+- **POPD** 
 Restores the previous value of the current directory saved by PUSHD
-**PRINT**
+- **PRINT**
 prints a text file
-**PROMPT** 
+- **PROMPT** 
 Changes the Windows command Prompt 
-**PUSHD**
+- **PUSHD**
 Saves the current directory then changes it  
-**RD**
+- **RD**
 Removes a directory
-**RECOVER**
+- **RECOVER**
 Recovers readable information from a bad or defective disk 
-**REM** 
+- **REM** 
 Designates comments (remarks) in a batch file 
-**REN**
+- **REN**
 Renames a file or files 
-**REPLACE**
+- **REPLACE**
 replaces files
-**ROBOCOPY**
+- **ROBOCOPY**
 Advanced utility to copy files and directory trees
-**SET**
+- **SET**
 Displays, Sets, or Removes environment variables for current session
-**SETLOCAL** 
+- **SETLOCAL** 
 Begins localization of environment changes in a batch file 
-**SETX**
+- **SETX**
 Sets Environmental Variables 
-**SC**
+- **SC**
 Displays or configures services (background processes)
-**SCHTASKS**
+- **SCHTASKS**
 Schedules commands and programs to run on a computer 
-**SHIFT** 
+- **SHIFT** 
 Shifts the position of replaceable parameters in batch files 
-**SHUTDOWN** 
+- **SHUTDOWN** 
 Allows proper local or remote shutdown of machine
-**SORT**
+- **SORT**
 Sorts Input
-**START** 
+- **START** 
 Starts a seperate window to run a specified programs or command 
-**SUBST**
+- **SUBST**
 Associates a path with a drive Letter
-**SYSTEMINFO**
+- **SYSTEMINFO**
 Displays machine specific properties and configuration
-**TAKEOWN**
+- **TAKEOWN**
 Allows an administrator to take ownership of a file 
-**TASKLIST**
+- **TASKLIST**
 Displays all currently running tasks including services 
-**TASKKILL**
+- **TASKKILL**
 Kil running process or applications
-**TIME**
+- **TIME**
 Display or sets the system time
-**TIMEOUT** 
+- **TIMEOUT** 
 Pauses the command processsor for the specified number of seconds
-**TITLE**
+- **TITLE**
 Sets the window title for a CMD.exe session
-**TREE** 
+- **TREE** 
 Graphically displays the directory structure of a drove or path
-**TYPE**
+- **TYPE**
 Displays the contents of a text file
-**VER**
+- **VER**
 Displays the windows version
-**VERIFY** 
+- **VERIFY** 
 Tells Windows whether or verify that your files are written correctly to a disk 
-**VOL** 
+- **VOL** 
 Displays a disk olume label and serial number
-**VSSADMIN**
+- **VSSADMIN**
 Valume Shadow Copy Service Administration tool 
-**WHERE** 
+- **WHERE** 
 Displays the locations of files that match a search pattern 
-**WMIC**
+- **WMIC**
 Displays the WMI information inside interactive command shell
-**XCOPY**
+- **XCOPY**
 Copies files and directory trees 
